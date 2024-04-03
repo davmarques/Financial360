@@ -105,7 +105,7 @@ i {
     left: 0;
 }
 
-main {
+.home-index {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -128,14 +128,14 @@ strong {
     font-size: 5rem;
 }
 
-main h1 {
+.home-index h1 {
     font-size: 4rem;
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
-main p {
+.home-index p {
     font-size: 1.6rem;
     text-align: center;
     margin: auto;
@@ -165,6 +165,62 @@ main p {
     margin: auto;
 }
 
+/* Pag Gestao */
+
+h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 2rem 0 2rem 8rem;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr, 1fr ;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.first-line .second-line{
+    width: 80vw;
+}
+.first-line input {
+    margin: auto;
+    width: 48%;
+    margin-right: 20px;
+}
+.second-line input {
+    width: 23vw;
+}
+input {
+    height: 50px;
+    border-radius: 100px;
+    border: 1px solid var(--black);
+    text-align: center;
+    margin-right: 10px;
+    
+}
+select {
+    height: 50px;
+    border-radius: 100px;
+    border: 1px solid var(--black);
+    text-align: center;
+    margin-right: 10px;
+    width: 15vw;
+}
+
+.plus-btn {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+
+
+/* MEDIA QUERIES */
 
 @media (max-width: 1500px) {
     .left-content {
