@@ -180,25 +180,29 @@ form {
     align-items: center;
     gap: 20px;
 }
-
+/* 
 .first-line .second-line{
     width: 80vw;
-}
+} */
 .first-line input {
     margin: auto;
-    width: 48%;
+    width: 29vw;
     margin-right: 20px;
 }
 .second-line input {
-    width: 23vw;
+    width: 18vw;
 }
 input {
     height: 50px;
     border-radius: 100px;
     border: 1px solid var(--black);
     text-align: center;
-    margin-right: 10px;
-    
+    margin-right: 10px;    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 select {
     height: 50px;
