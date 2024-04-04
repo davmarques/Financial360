@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('myForm');
     const tableBody = document.querySelector('.listaDespesas');
 
-    // Função para salvar os dados no localStorage
     function saveData(vencimento, fornecedor, descricao, valor, situacao) {
         let data = localStorage.getItem('formData');
         if (!data) {
