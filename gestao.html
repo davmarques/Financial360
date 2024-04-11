@@ -40,7 +40,7 @@
             <div class="first-line">
                 <input type="text" placeholder="Fornecedor" class="big-input" id="fornecedor">
                 <input type="number" placeholder="Valor" class="small-input" id="valor" step=".01">
-                <input type="text" placeholder="Vencimento" onfocus="(this.type= 'date')" onblur="(this.type= 'text')"
+                <input type="text" placeholder="Vencimento" onfocus="(this.type = 'date')" onblur="(this.type = 'text')"
                     class="small-input" id="vencimento">
             </div>
             <div class="second-line">
@@ -51,8 +51,8 @@
                     <option value="Em Aberto">Em Aberto</option>
                     <option value="Vencido">Vencido</option>
                 </select>
-                <button class="plus-btn" type="submit">+</button>
-                <button class="plus-btn" onclick="pesquisarDespesa()">-</button>
+                <button class="plus-btn" id="addDespesa" type="submit"><i class="fa-solid fa-plus"></i></button>
+                <button class="plus-btn" id="searchButton""><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </form>
         <table class="table">
@@ -63,6 +63,7 @@
                     <th>Descrição</th>
                     <th>Valor</th>
                     <th>Situação</th>
+                    <th class="trash-slot"></th>
                 </tr>
             </thead>
             <tbody id="listaDespesas">
@@ -74,6 +75,7 @@
 
 
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/14d1f2f7b4.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

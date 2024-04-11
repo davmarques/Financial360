@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             data = JSON.parse(data);
         }
-        data.push({vencimento, fornecedor, descricao, valor, situacao });
+        data.push({ vencimento, fornecedor, descricao, valor, situacao });
         localStorage.setItem('formData', JSON.stringify(data));
     }
 
@@ -31,7 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
             data.forEach(item => {
                 const row = document.createElement('tr');
                 row.className = 'saved-row'
-                row.innerHTML = `<td>${item.vencimento}</td><td>${item.fornecedor}</td><td>${item.descricao}</td><td>${item.valor}</td><td>${item.situacao}</td>`;
+                row.innerHTML = `<td>${item.vencimento}</td>
+                <td>${item.fornecedor}</td>
+                <td>${item.descricao}</td>
+                <td>${item.valor}</td>
+                <td>${item.situacao}</td>
+                <button id='deleteButton'><i class="fa-solid fa-trash"></i></button>`;
                 listaDespesas.appendChild(row);
             });
         }
@@ -41,8 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     displayData();
 
     // Lidar com o envio do formulário
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    document.getElementById('addDespesa').addEventListener('click', function () {
         const vencimento = document.getElementById('vencimento').value.trim();
         const fornecedor = document.getElementById('fornecedor').value.trim();
         const descricao = document.getElementById('descricao').value.trim();
@@ -51,9 +55,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (vencimento && fornecedor && descricao && valor && situacao) {
             saveData(vencimento, fornecedor, descricao, valor, situacao);
             displayData();
-            form.reset();
+            document.getElementById('form').reset();
         } else {
             alert('Por favor, preencha todos os campos');
         }
     });
 });
+
+// script para buscar despesas
+
+// script para excluir despesas
+
