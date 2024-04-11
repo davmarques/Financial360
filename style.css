@@ -278,7 +278,7 @@ th.trash-slot {
     width: 50px;
     margin: .5rem;
 }
-#deleteButton {
+.deleteButton {
     background-color: var(--black);
     border-radius: 50px;
     width: 50px;

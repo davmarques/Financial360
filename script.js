@@ -28,19 +28,31 @@ document.addEventListener('DOMContentLoaded', function () {
         let data = localStorage.getItem('formData');
         if (data) {
             data = JSON.parse(data);
-            data.forEach(item => {
+            data.forEach((item, index) => {
                 const row = document.createElement('tr');
-                row.className = 'saved-row'
+                row.className = 'saved-row';
                 row.innerHTML = `<td>${item.vencimento}</td>
-                <td>${item.fornecedor}</td>
-                <td>${item.descricao}</td>
-                <td>${item.valor}</td>
-                <td>${item.situacao}</td>
-                <button id='deleteButton'><i class="fa-solid fa-trash"></i></button>`;
+                    <td>${item.fornecedor}</td>
+                    <td>${item.descricao}</td>
+                    <td>${item.valor}</td>
+                    <td>${item.situacao}</td>`;
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'deleteButton'
+                deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+                deleteButton.addEventListener('click', function() {
+                    // Remover a linha quando o botão for clicado
+                    row.remove();
+                    // Remover o item correspondente do localStorage
+                    data.splice(index, 1);
+                    localStorage.setItem('formData', JSON.stringify(data));
+                });
+                row.appendChild(deleteButton);
                 listaDespesas.appendChild(row);
             });
         }
     }
+    
+    
 
     // Exibir dados salvos ao carregar a página
     displayData();
