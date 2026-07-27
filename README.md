@@ -24,14 +24,14 @@ Uma plataforma completa de gestão financeira pessoal e planejamento de economia
 - **Contas Recorrentes:** Acompanhe pagamentos fixos e suas datas de vencimento.
 - **Autenticação Completa:** Sistema de login e cadastro seguro via Supabase Auth.
 
-## 🛠️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 O projeto utiliza uma estrutura de **Monorepo**:
 
 - `/frontend`: Aplicação cliente React.
 - `/backend`: Configurações de servidor e definições do Supabase (migrações e tipos).
 
-## 🔧 Como Executar
+##  Como Executar
 
 ### Pré-requisitos
 - Node.js (v18+)
@@ -55,6 +55,6 @@ O projeto utiliza uma estrutura de **Monorepo**:
    - Crie um arquivo `.env` baseado no `.env.example` com as credenciais do seu Supabase.
    - Inicie o app: `npm run dev`.
 
-## 📄 Licença
+##  Licença
 
 Este projeto está sob a licença MIT.
