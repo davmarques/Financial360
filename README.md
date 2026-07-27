@@ -1,8 +1,8 @@
-# Financial360 💰
+# Financial360 
 
 Uma plataforma completa de gestão financeira pessoal e planejamento de economia, construída com uma arquitetura moderna Full Stack.
 
-## 🚀 Tecnologias
+##  Tecnologias
 
 ### Frontend
 - **React.js** com **Vite**
@@ -15,7 +15,7 @@ Uma plataforma completa de gestão financeira pessoal e planejamento de economia
 - **Supabase** (PostgreSQL, Auth, Real-time)
 - **SQL Migrations** para versionamento do banco
 
-## 📋 Funcionalidades
+##  Funcionalidades
 
 - **Visão Geral (Overview):** Resumo de saldo, orçamentos, potes e transações recentes.
 - **Gerenciamento de Transações:** Fluxo completo de receitas e despesas.
